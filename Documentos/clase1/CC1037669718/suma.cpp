@@ -1,9 +1,10 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-  int n1, n2, s;
+  int n1, n2, s, x;
   s = 0;
   cout << "Introduzca dos números enteros n1 y n2 tal que n1 < n2. Este código retornará la suma de todos los enteros entre n1 y n2" ;
   cin >> n1 >> n2;
@@ -11,7 +12,7 @@ int main()
   cout << "Para mostrar el resultado en la terminal entre el numero 1 \nPara guardar el resultado en un archivo de texto presione 0\n";
   cin >> x;
   if(x==1) cout << "El resultado de la suma es " << s << "\n";
-  if(t==0){
+  if(x==0){
     ofstream file;
     file.open("out.txt");
     file << s;
