@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+
+int main()
+{ cout << "Ingrese n1 y n2" << "\n";
+  int n1;
+  int n2;
+  cin >> n1 >> n2;
+  int suma=0;
+  for (int i=n1; 1<=n2; i=i+1)
+    {
+      suma=suma+1
+      return suma;
+    }
+
+  cout << "Presione 1 para ver en pantalla y 2 para ver en un archivo de texto" << "\n";
+  int n;
+  cin >> n;
+  if(n==1){
+    cout<< suma<< endl;
+  }
+  if(n==2){
+  ofstream file;
+  file.open("suma.txt");
+  file << "Resultado suma:";
+  file << suma;
+  file.close();
+  }
+  return 0;
+}
