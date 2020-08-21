@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+
+int main()
+{ cout << "Ingrese n1 y n2" << "\n";
+  int n1;
+  int n2;
+  cin >> n1;
+  cin >> n2;
+  ofstream file;
+  file.open(suma.txt);
+  file << 'Resultado suma:';
+  file << n1;
+  file.close();
+  int suma = 0;
+for( int i = n1; i <= n2; i ++  ){suma = i + suma}cout << suma >> endl; return 0;  
+}  
