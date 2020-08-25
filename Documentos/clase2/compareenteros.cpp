@@ -13,7 +13,7 @@ int main()
    int number1; // primer entero
    int number2; // segundo entero
 
-   /*
+   
    cout << "entre dos numeros enteros: "; // 
    cin >> number1 >> number2; // lee los dos enteros del usuario
 
@@ -34,7 +34,7 @@ int main()
 
    if ( number1 >= number2 )
       cout << number1 << " >= " << number2 << endl;
-   */
+   
 
    /*
    cout<< "La suma de 6 y 5 es" << std::setw(33) << 21  << endl;
