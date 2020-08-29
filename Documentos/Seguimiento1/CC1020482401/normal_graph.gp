@@ -1,0 +1,1 @@
+plot "normal_dates.txt"
