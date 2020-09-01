@@ -1,1 +1,3 @@
-plot "normal_dates.txt"
+set term png
+set out 'graph.png'
+plot "normal_data.txt"

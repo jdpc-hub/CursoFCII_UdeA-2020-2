@@ -1,12 +1,10 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 #include <fstream>
 
 
 using std::cout; 
 using std::cin; 
-using std::setw;
 using std::ofstream;
 
 
@@ -36,14 +34,14 @@ int main(int argc, char const *argv[])
 void normal_function(float mu, float sigma, int n, float a, float b)
 {
 	float N, z;
-	float dx = (b-a) / n; 
+	float dx = (b-a) / n; 		
 
 	N = 1 / (sigma * sqrt(2 * M_PI));
 
 	for(float x = a; x <= b; x = x + dx)
 	{
 		z = (x - mu) / sigma;
-		file << x << setw(10) << N * exp(-0.5 * pow(z, 2)) << "\n";
+		file << "    " << N * exp(-0.5 * pow(z, 2)) << "\n";
 	}
 
 	file.close();
