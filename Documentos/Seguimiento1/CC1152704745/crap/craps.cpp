@@ -44,7 +44,7 @@ void craps_game::play_move(int lst_punto = 0){
 		int d_sum = dado_1 + dado_2;
 		std::cout << "La suma de esta movida fue: " << d_sum  << std::endl;
 
-		if ((d_sum == 2) || (d_sum == 3) || (d_sum == 12)){
+		if (d_sum == 7){
 			std::cout << "***** CRAP: HA PERDIDO *****" << std::endl;
 			play_again();
 		}
