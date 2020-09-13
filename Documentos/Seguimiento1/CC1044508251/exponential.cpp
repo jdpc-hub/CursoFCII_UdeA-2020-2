@@ -5,10 +5,10 @@ using namespace std;
 #include "exponential.h"
 
 //Se inicializa N (precision) y x
-Exponential::Exponential()
+Exponential::Exponential(int n)
 {
   x = 0;
-  N = 10;
+  N = n;
 }
 
 // Funcion para calcular el factorial
@@ -39,7 +39,7 @@ float Exponential::exponential(float y)
 {
   x = y;
   float exp = 0;
-  
+
   for(int i=0; i<=N; i++)
     {
       exp = exp + pow(x,i)/factorial(i);
