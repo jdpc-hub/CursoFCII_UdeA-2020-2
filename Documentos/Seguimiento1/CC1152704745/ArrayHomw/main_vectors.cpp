@@ -1,11 +1,14 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip>
+#include <string>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
+#include <vector>
 
 using std::rand;
 using std::setw;
+using std::vector;
 
 int throw_dice(void);
 void update_frequency(int);
@@ -14,11 +17,12 @@ void print_frequencies(int);
 
 static const int n_pos = 11; // de 2 a 12
 
-static int freqs[n_pos];
+static vector <int> freqs (n_pos);
 static int is_seven=0;
 
-int main(){	
-	srand(time(NULL));
+
+int main(){
+    std::srand(time(NULL));
 
 	int n_throws = 36000;
 	
@@ -29,9 +33,7 @@ int main(){
 	return 0;
 }
 
-
-/*------ functions ------------------*/
-
+/*------- functions -------------*/
 
 int throw_dice(void){
 	return 1 + rand() % 6;
