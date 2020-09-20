@@ -66,7 +66,7 @@ void vectores(int n)
 	}
     }
 
-  cout << "Arreglos" << endl;
+  cout << "Vectores" << endl;
   
   for(int j=2; j<=12; j=j+1)
     {
