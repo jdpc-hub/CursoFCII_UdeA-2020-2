@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -16,10 +17,10 @@ obtener cada resultado es (1/36, 2/36, 3/36, 4/36, 5/36, 6/36, 5/36, 4/36, 3/36,
 int main()
 {
 
-  const int n = 13;
-
-  int teorico[ n ] = {0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1}; // Arreglo combinaciones
-  int simulado[ n ] = { }; // Arreglo lanzamiento aleatorio
+  int n = 13;
+  
+  vector <int> teorico = {0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1}; // Vector combinaciones
+  vector <int> simulado(n, 0); // Vector lanzamiento aleatorio
 
   srand(time(NULL));
 
@@ -33,13 +34,13 @@ int main()
       simulado[( 1 + rand() % 6) + (1 + rand() % 6)]++;
     }
 
-  cout << setw( 8 ) << "\nResultado " << setw( 13 ) << "Frecuencia " << setw( 15 )
-       << "% Simulado " << setw( 15 ) << " % Teórico " << endl;
-
+  cout << setw( 9 ) << "\nResultado " << setw( 13 ) << "Frecuencia " << setw( 14 )
+       << "% Simulado" << setw( 15 ) << "% Teórico " << endl;
+  
   for ( j = 2; j <= n-1; j++ ) // La suma de los dos valores está entre 2 y 12
     {
-      cout << setw( 8 ) << j << setw( 13 ) << simulado[j] << setw( 15 )
-	   << simulado[j]*100.0/k << setw( 15 ) << teorico[j]*100.0/l << endl;
+      cout << setw( 9 ) << j << setw( 13 ) << simulado[j] << setw( 14 )
+	   << simulado[j]*100.0/k <<  setw( 14 ) << teorico[j]*100.0/l << endl;
     }
 
   cout << "\nEl total simulado es razonable, comparado con el cálculo teórico.\n" << endl;
