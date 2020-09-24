@@ -3,7 +3,7 @@
 using namespace std;
 
 //int VolumenCaja(int , int , int );
-int VolumenCaja(int = 1, int = 1, int =1 );
+int VolumenCaja(int = 1, int = 1, int =1 ); //funcion prototipo
 
 int main()
 {
