@@ -139,7 +139,7 @@ void messages(bool gameResult)
         if(consWins > 1) //pasó de varias victorias consecutivas a una pérdida
             cout << "Esto no es problema. Te recuperaras..." << endl;
         else if( consWins == 1) //ganó una vez y luego perdió
-            cout << "Sólo fue un susto pasajero. Sigue jugando..." << endl;
+            cout << "Animo, sigue jugando..." << endl;
         else if((consWins-1)%3 == 0 && consWins < 0) //Lleva 3*n pérdidas consecutivas
             cout << "Tienes muy mala suerte. Deberias pensar en tu familia..." << endl;
         consWins = (consWins > 0)? -1: consWins - 1; //actializar el numero de pérdidas
