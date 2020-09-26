@@ -24,10 +24,10 @@ int main()
 
   //T_k es la aproximación de orden k a la integral desde a hasta b de f(x)dx
   double T_k;
-  
+
   //Definición del T_0
   const double T_0 = 0.5*(f(a) + f(b))*(b - a);
-  
+
   //Se usará la convención de que T_j = T_(k-1)
   double T_j = T_0;
 
@@ -39,7 +39,7 @@ int main()
   cout << "Defina el número de cifras decimales para los resultados." << endl;
   cout << "Precisión = ";
   cin >> precision;
-  
+
   cout << "T_0 = " << fixed << setprecision(precision) << T_0 << endl;
 
   double suma_k;
@@ -48,9 +48,9 @@ int main()
       //Definición del ancho de los trapecios
       dx_k = (b - a)/pow(2, k);
 
-      //Sumatoria desde 1 hasta 2^(k-1) de f(a + (2*i - 1)*dx_k)
+      //Sumatoria desde i=1 hasta i=2^(k-1) de f(a + (2*i - 1)*dx_k)
       //Que es equivalente a hacer
-      //Sumatoria desde 1 hasta 2^k - 1 de f(a + i*dx_k) sobre lo i impares
+      //Sumatoria desde i=1 hasta i=2^k - 1 de f(a + i*dx_k) sobre lo i impares
       suma_k = 0;
       for (int i = 1; i <= pow(2, k-1); i++)
 	suma_k += f(a + (2*i - 1)*dx_k);
