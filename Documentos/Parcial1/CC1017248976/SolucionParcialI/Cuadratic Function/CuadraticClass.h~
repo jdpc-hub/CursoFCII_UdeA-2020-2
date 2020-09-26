@@ -1,0 +1,12 @@
+class Cuadratic
+{
+ public:
+  Cuadratic();
+  float Discriminant(float,float,float);
+  float Root(float, float, float);
+ private:
+  // Definicion de las variables 
+  float a, b, c;
+
+
+}

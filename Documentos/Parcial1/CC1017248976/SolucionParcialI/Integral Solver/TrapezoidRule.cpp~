@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+#include "TrapezoidalClass.h"
+
+using namespace std;
+
+TrapezoidRule::TrapezoidRule(){
+  float a=0;
+  float b=0;
+  float x=0
+}
+
+void TrapezoidRule::DisplayMessage(){
+  cout<<"Este código sirve para calcular la integral definida del poinomio cuadrático de forma AX^2 + BX +C en el intervalo [a,b]";
+}
+
+void TrapezoidRule::SetValues(){
+  cout << "\n Ingrese los valores de A, B y C para calcular la integral de dicho Polinomio\n";
+  cout<< "A = ";
+  cin>> A;
+  cout<<"B = ";
+  cin>> B;
+  cout<<"C = ";
+  cin>> C;
+  cout<<"\nIngrese ahora en qué intervalo desea integrar \n";
+  cout <<"a= ";
+  cin >> a;
+  cout << "b= ";
+  cin << b;
+  cout << "Se encontrará la integral para el polinomio: " << A <<"x^2 + "<< B << "x + "<< C <<"   en el intervalo: ["<< a <<","<< b <<"] "<<" \n";
+}
+
